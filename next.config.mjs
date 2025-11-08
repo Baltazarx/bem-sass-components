@@ -2,6 +2,9 @@
 const nextConfig = {
   /* config options here */
   reactStrictMode: true,
+  sassOptions: {
+    includePaths: ["./src/styles"],
+  },
 };
 
 export default nextConfig;

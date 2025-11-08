@@ -1,0 +1,38 @@
+/* src/styles/globals.scss */
+
+/* Variables */
+$cream: #f4ebe4;
+$dark-brown: #201b18;
+$mid-brown: #6b4e3d;
+$accent: #c49a6c;
+$muted: #8d6e63;
+$white: #ffffff;
+
+/* Global resets */
+* { box-sizing: border-box; }
+html, body, #__next { height: 100%; }
+body {
+  margin: 0;
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color: $dark-brown;
+  background: $white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* utility */
+.container {
+  width: min(1200px, 92%);
+  margin: 0 auto;
+}
+button {
+  font-family: inherit;
+}
+
+/* small helpers */
+.visually-hidden {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden; clip: rect(1px,1px,1px,1px);
+  white-space: nowrap;
+}

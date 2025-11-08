@@ -1,0 +1,128 @@
+@use "../../styles/variables" as *;
+
+.footer {
+  width: 100%;
+  color: $white;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-family: "Poppins", sans-serif;
+  border-radius: 8px;
+
+  &--simple {
+    background-color: $mid-brown;
+    box-shadow: 0 -2px 8px rgba(107, 78, 61, 0.3);
+  }
+
+  &--social {
+    background: linear-gradient(135deg, $dark-brown, $mid-brown);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    box-shadow: 0 -2px 8px rgba(32, 27, 24, 0.3);
+
+    .footer__icon {
+      font-size: 1.5rem;
+      color: $white;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: scale(1.3) translateY(-3px);
+        color: $cream;
+      }
+    }
+  }
+
+  &--grid {
+    background-color: $accent;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+    text-align: left;
+    box-shadow: 0 -2px 8px rgba(196, 154, 108, 0.3);
+
+    .footer__section {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+
+      h4 {
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        color: $white;
+        font-size: 1rem;
+      }
+
+      a {
+        color: $cream;
+        text-decoration: none;
+        transition: all 0.2s ease;
+        padding: 0.25rem 0;
+
+        &:hover {
+          color: $white;
+          padding-left: 0.5rem;
+        }
+      }
+    }
+  }
+
+  &__text {
+    font-size: 1rem;
+    margin: 0;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .footer {
+    padding: 1.25rem 1rem;
+
+    &--social {
+      gap: 1rem;
+      padding: 1.25rem 1rem;
+
+      .footer__icon {
+        font-size: 1.3rem;
+      }
+    }
+
+    &--grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    &__text {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 1rem 0.75rem;
+
+    &--social {
+      gap: 0.75rem;
+      padding: 1rem 0.75rem;
+
+      .footer__icon {
+        font-size: 1.2rem;
+      }
+    }
+
+    &--grid {
+      padding: 1rem;
+      gap: 1rem;
+    }
+
+    &__text {
+      font-size: 0.85rem;
+    }
+  }
+}
