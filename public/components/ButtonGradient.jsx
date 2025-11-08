@@ -1,11 +1,12 @@
 import React from "react";
+import { FaArrowRight } from "react-icons/fa";
 import styles from "./Button.module.scss";
 
-export default function ButtonGradient({ label = "Order Now", onClick }) {
+export default function ButtonGradient({ label = "Explore", onClick }) {
   return (
     <button className={styles["btn--gradient"]} onClick={onClick}>
-      {label}
+      <span>{label}</span>
+      <FaArrowRight className={styles["btn--gradient__icon"]} />
     </button>
   );
 }
-

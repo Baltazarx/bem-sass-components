@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import ButtonBasic from "@/components/Button/ButtonBasic";
 import ButtonGradient from "@/components/Button/ButtonGradient";
 import ButtonIcon from "@/components/Button/ButtonIcon";
-import CardPrimary from "@/components/Card/CardPrimary";
-import CardOutline from "@/components/Card/CardOutline";
-import CardShadow from "@/components/Card/CardShadow";
+import CardBadge from "@/components/Card/CardBadge";
+import CardAction from "@/components/Card/CardAction";
+import CardGradient from "@/components/Card/CardGradient";
 import HeaderSimple from "@/components/Header/HeaderSimple";
 import HeaderLogo from "@/components/Header/HeaderLogo";
 import HeaderNav from "@/components/Header/HeaderNav";
@@ -38,7 +38,7 @@ export default function ContentArea({ activeSection }) {
   return (
     <div className={styles.area}>
       <h2 className={styles.area__title}>Tampilkan Variant Component disini</h2>
-      <div className={styles.area__items}>
+      <div className={`${styles.area__items} ${activeSection === "header" || activeSection === "footer" ? styles["area__items--vertical"] : ""}`}>
         {activeSection === "button" && (
           <>
             <ComponentWrapper 
@@ -59,16 +59,16 @@ export default function ContentArea({ activeSection }) {
         {activeSection === "card" && (
           <>
             <ComponentWrapper 
-              component={<CardPrimary />} 
-              codeFile="CardPrimary.jsx"
+              component={<CardBadge />} 
+              codeFile="CardBadge.jsx"
             />
             <ComponentWrapper 
-              component={<CardOutline />} 
-              codeFile="CardOutline.jsx"
+              component={<CardAction />} 
+              codeFile="CardAction.jsx"
             />
             <ComponentWrapper 
-              component={<CardShadow />} 
-              codeFile="CardShadow.jsx"
+              component={<CardGradient />} 
+              codeFile="CardGradient.jsx"
             />
           </>
         )}
