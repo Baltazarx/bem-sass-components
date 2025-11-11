@@ -543,10 +543,52 @@
   box-sizing: border-box;
 }
 
+.codePreviewHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 1rem;
+  position: relative;
+}
+
+.viewModeToggle {
+  display: flex;
+  gap: 0.5rem;
+  background: rgba(194, 24, 91, 0.1);
+  padding: 0.25rem;
+  border-radius: 8px;
+  border: 1px solid rgba(244, 143, 177, 0.2);
+}
+
+.viewModeBtn {
+  padding: 0.5rem 1rem;
+  background: transparent;
+  color: $soft-red-light;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: rgba(244, 143, 177, 0.2);
+    color: $white;
+  }
+
+  &.active {
+    background: linear-gradient(135deg, $soft-red-accent 0%, rgba(244, 143, 177, 0.95) 100%);
+    color: $white;
+    box-shadow: 0 2px 8px rgba(244, 143, 177, 0.3);
+  }
+}
+
 .copyButton {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
+  position: relative;
+  top: auto;
+  right: auto;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -812,9 +854,20 @@
     line-height: 1.6;
   }
 
+  .codePreviewHeader {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .viewModeToggle {
+    width: 100%;
+    justify-content: center;
+  }
+
   .copyButton {
-    top: 0.75rem;
-    right: 0.75rem;
+    width: 100%;
+    justify-content: center;
     padding: 0.5rem 1rem;
     font-size: 0.8rem;
     min-height: 36px;
@@ -958,9 +1011,20 @@
     font-size: 0.8rem;
   }
 
+  .codePreviewHeader {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.625rem;
+  }
+
+  .viewModeToggle {
+    width: 100%;
+    justify-content: center;
+  }
+
   .copyButton {
-    top: 0.625rem;
-    right: 0.625rem;
+    width: 100%;
+    justify-content: center;
     padding: 0.45rem 0.875rem;
     font-size: 0.75rem;
     min-height: 34px;

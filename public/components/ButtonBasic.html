@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Button Basic - Standalone</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: #fff5f5;
+      padding: 2rem;
+    }
+
+    .btn--basic {
+      font-family: "Poppins", sans-serif;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #e57373 0%, rgba(229, 115, 115, 0.95) 100%);
+      color: #ffffff;
+      padding: 16px 32px;
+      border-radius: 12px;
+      font-size: 15px;
+      box-shadow: 0 4px 15px rgba(229, 115, 115, 0.25),
+                  0 2px 6px rgba(229, 115, 115, 0.15);
+      backdrop-filter: blur(10px);
+      min-width: 180px;
+      min-height: 50px;
+      white-space: nowrap;
+    }
+
+    .btn--basic i {
+      font-size: 15px;
+    }
+
+    .btn--basic:hover {
+      background: linear-gradient(135deg, #c2185b 0%, #e57373 100%);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(229, 115, 115, 0.35),
+                  0 4px 10px rgba(229, 115, 115, 0.2);
+    }
+
+    .btn--basic:active {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 15px rgba(229, 115, 115, 0.25);
+    }
+
+    @media (max-width: 768px) {
+      .btn--basic {
+        padding: 16px 24px;
+        font-size: 15px;
+        min-height: 50px;
+        min-width: 160px;
+        width: 100%;
+        max-width: 100%;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .btn--basic {
+        padding: 16px 20px;
+        font-size: 15px;
+        min-height: 50px;
+        min-width: 140px;
+        border-radius: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <button class="btn--basic" onclick="alert('Button clicked!')">
+    <i class="fas fa-check"></i>
+    <span>Submit</span>
+  </button>
+</body>
+</html>
+
