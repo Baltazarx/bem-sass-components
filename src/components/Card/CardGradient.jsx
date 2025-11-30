@@ -1,4 +1,4 @@
-import React from "react";
+                                                              import React from "react";
 import styled from "styled-components";
 import { colors, textColors, borderRadius, typography, spacing, shadows, effects } from "../../styles/tokens/themes";
 
@@ -14,8 +14,7 @@ const CardContainer = styled.div`
   background: transparent;
   border: none;
   border-radius: ${borderRadius.lg};
-  box-shadow: ${shadows.xl} rgba(194, 24, 91, 0.15),
-              0 4px 12px rgba(229, 115, 115, 0.1);
+  box-shadow: ${shadows.xl} rgba(194, 24, 91, 0.15),0 4px 12px rgba(229, 115, 115, 0.1);                                                                              
   position: relative;
   overflow: hidden;
 

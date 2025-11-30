@@ -5,6 +5,7 @@ import ButtonIcon from "@/components/Button/ButtonIcon";
 import CardBadge from "@/components/Card/CardBadge";
 import CardAction from "@/components/Card/CardAction";
 import CardGradient from "@/components/Card/CardGradient";
+import CardVariant from "@/components/Card/CardVariant";
 import HeaderSimple from "@/components/Header/HeaderSimple";
 import HeaderLogo from "@/components/Header/HeaderLogo";
 import HeaderNav from "@/components/Header/HeaderNav";
@@ -69,6 +70,43 @@ export default function ContentArea({ activeSection }) {
             <ComponentWrapper 
               component={<CardGradient />} 
               codeFile="CardGradient.jsx"
+            />
+            <ComponentWrapper 
+              component={
+                <CardVariant 
+                  variant="gradient"
+                  image="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                  title="Gradient Card"
+                  text="This is a beautiful gradient card with animation effects and modern design."
+                  buttonText="Learn More"
+                  onButtonClick={() => alert('Gradient card clicked!')}
+                />
+              } 
+              codeFile="CardVariant.jsx"
+            />
+            <ComponentWrapper 
+              component={
+                <CardVariant 
+                  variant="outline"
+                  image="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                  title="Outline Card"
+                  text="This card features a clean outline design with subtle hover effects."
+                  buttonText="View Details"
+                />
+              } 
+              codeFile="CardVariant.jsx"
+            />
+            <ComponentWrapper 
+              component={
+                <CardVariant 
+                  variant="animated"
+                  image="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                  title="Animated Card"
+                  text="Experience the mesmerizing animated gradient background effect."
+                  buttonText="Explore"
+                />
+              } 
+              codeFile="CardVariant.jsx"
             />
           </>
         )}
